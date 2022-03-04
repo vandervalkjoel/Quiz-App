@@ -69,3 +69,6 @@ button:focus{
     background-color: #89af31;
     outline: none;
 }
+.hide {
+    display: none;
+  }

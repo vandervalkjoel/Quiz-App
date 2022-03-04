@@ -1,42 +1,42 @@
 const quizData = [
     {
-        question : 'How old is the Florin?',
-        a: '10',
-        b: '17',
-        c: '26',
-        d: '110',
+        question : 'Who won the Stanley Cup last year?',
+        a: 'Calgary Flames ',
+        b: 'Montreal Canadians ',
+        c: 'Tampa Bay Lightning',
+        d: 'Edmonton Oilers',
         correct: 'c'
     },
-    // {
-    //     question: 'What is the most used programming language in 2019?',
-    //     a: 'Python',
-    //     b: 'C',
-    //     c: 'Java',
-    //     d: 'Javascript',
-    //     correct: 'd'
-    // },{
-    //     question: 'Who is the president of the US?',
-    //     a: 'Florin Pop',
-    //     b: 'Donald Trump',
-    //     c: 'Hiliary Clinton',
-    //     d: 'Joel Vandervalk',
-    //     correct: 'b',
-    // },{
-    //     question: 'What does HTML stand for?',
-    //     a: 'Hypertext Markup Language',
-    //     b: 'Cascading Style Sheet',
-    //     c: 'Jason object notation',
-    //     d: 'Application Programming Interface',
-    //     correct: 'a',
+    {
+        question: 'Who led the NHL in points last year?',
+        a: 'Connor MacDavid',
+        b: 'Sidney Crosby',
+        c: 'Alexander Ovechkin',
+        d: 'John Tavares',
+        correct: 'a'
+    },{
+        question: 'Who won the most recent SuperBowl?',
+        a: 'Tampa Bay Buccaneers',
+        b: 'Los Angeles Rams',
+        c: 'New York Jets',
+        d: 'New York Giants',
+        correct: 'b',
+    },{
+        question: 'Which of these is not a team in the NHL',
+        a: 'Calgary Flames',
+        b: 'Edmonton Oilers',
+        c: 'Toronto Blue Jays',
+        d: 'Toronto Maple Leafs',
+        correct: 'c',
 
-    // },{
-    //     question: 'What year was Javascript launched',
-    //     a: '1994',
-    //     b: '2000',
-    //     c: '2010',
-    //     d: 'none of the above',
-    //     correct: 'd'
-    // }
+    },{
+        question: 'Which of these is not a team in the NBA',
+        a: 'Toronto Raptors',
+        b: 'Los Angeles Lakers',
+        c: 'Los Angeles Clippers',
+        d: 'They are all teams in the NBA',
+        correct: 'd'
+    }
 
 ];
 
@@ -54,12 +54,12 @@ const submitBtn = document.getElementById("submit");
 let currentQuiz = 0;
 
 let score = 0;
-
 starting.addEventListener('click', startQuiz);
-
 function startQuiz() {
+    starting.classList.add('hide')
+    quiz.classList.remove('hide')
     loadQuiz();
-  }
+}
 
 function loadQuiz(){
     deselectAnswers();
